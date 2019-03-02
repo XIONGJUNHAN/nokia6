@@ -1,0 +1,43 @@
+诺基亚6 2017 android P刷magisk以及root教程
+本教程要求Bootloader必须被解锁。解锁方法参考光卡的微博“HCT_Mascot_洛克人EFI”
+
+Root 完成之后，在没有恢复原厂镜像的前提下，严禁使用设置的恢复出厂设置或使用 Recovery 的 Wipe data/factory data reset 重置，否则手机会无限循环rec无法开机，并且你会看到此提示：
+
+Can't load Android system. Your data may be corrupt. If you continue to get this message, you may need to perform a factory data reset and erase all user data stored on this device.
+
+如果遇到这个警告，请选择 Factory data reset，然后在选择 Yes 的一瞬间马上按住音量减号，进入 Download mode 重新线刷固件。
+
+第一步，准备工作，所需文件
+所需文件有：
+recovery_mod.img
+
+Magisk-v17.1.zip
+
+MagiskManager-v6.1.0.apk
+
+OST6.0.4ForAll.rar
+
+以上文件下载地址：
+
+链接: https://pan.baidu.com/s/1UF9BQNOxVR8R3Scd2VYHWA
+
+提取码: cgwb
+
+准备工作：
+1、给电脑安装ost，将ost下载来以后，解压压缩包，然后选中setup文件，点击鼠标右键，选择“以管理员身份运行，然后按提示安装即可。
+
+2、下载recovery_mod.img并将其放置在电脑C:\
+
+3、下载Magisk-v17.1.zip、MagiskManager-v6.1.0.apk 放置手机内部存储根目录
+
+第二步，刷入magisk
+1、手机关机后连接电脑，打开C:\Program Files (x86)\OST LA目录，唤醒powersell工具，输入 .\fastboot-android reboot bootloader 回车。
+
+2、继续在刚才的powersell工具输入
+.\fastboot-android flash recovery c:\recovery_mod.img 回车
+
+3、继续在刚才的powersell工具手动输入 .\fastboot-android reboot 不要按回车然后按住音量加和电源键的同时按一下回车键进入此时手机正常进入recovery点击install，选择内置SD卡目录，看到Magisk-v17.1.zip点击安装，等待安装完。
+
+4、安装完成后选择reboot，手机开机后安装MagiskManager-v6.1.0.apk，然后打开它，就会发现magisk已经激活并拥有root权限。
+
+更多教程请访问：https://www.xiongjunhan.com
